@@ -134,6 +134,11 @@ body {
     color: #BDBDBD;
 }
 
+.h1-container .second {
+    color: #333333;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.569)
+}
+
 .buttons-container {
     width: 100%;
     display: flex;
@@ -187,6 +192,14 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: var(--Gray-1, #333);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
 
 .image-button:hover {
@@ -382,6 +395,14 @@ body {
     padding-left: 35px;
     gap: 10px;
     color: #FFF;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
 
 .project-buttons button:hover {
@@ -413,7 +434,7 @@ body {
     font-size: 64px;
     font-style: normal;
     font-weight: 300;
-    line-height: 64px; /* 100% */
+    line-height: 64px;
 }
 
 .contact-us-main-container {
@@ -437,7 +458,14 @@ body {
     height: 46px;
     background: #F2F2F2;
     border: 0;
-    color: #333333;;
+    color: #333333;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .form-input::placeholder {
@@ -450,25 +478,34 @@ body {
     padding: 10px;
 }
 
+
 .form-input-message {
     width: 100%;
-    height: 130px;
+    height: 145px;
     background: #F2F2F2;
     border: 0;
     color: #333333;
+    resize: none;
+    padding: 10px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19px;
+    box-sizing: border-box;
 }
 
-.form-input::target-text {
+.form-input-message::placeholder {
     color: #333333;
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: 19px;
-    padding: 10px;
+    padding: 10px; /* Можете залишити або видалити це, оскільки це не впливає на введені дані */
 }
 
-.form-input:focus {
+.form-input-message:focus {
     outline: none;
 }
 
@@ -496,7 +533,14 @@ body {
     align-items: center;
     gap: 10px;
     color: #FFF;
-    font-size: 16px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
 
 .contact-us-form button:hover {
@@ -545,22 +589,32 @@ body {
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 19px;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .footer-links a {
     text-decoration: none;
     color: #FFF;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 19px;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.42px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+.social-links {
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 40px;
+
 }
 
 .under-footer {
@@ -598,15 +652,16 @@ hr {
 }
 
 .gallery-images {
+    margin-top: 50px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    margin-top: 30px;
 }
 
 .gallery-img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -692,6 +747,15 @@ hr {
     align-items: center;
     gap: 10px;
     font-size: 16px;
+    text-decoration: none;
+    color: var(--Gray-1, #333);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
 
 .project-card-button:hover {
@@ -727,9 +791,18 @@ hr {
 }
 
 .contact-main-container {
+    padding: 0 200px 0 0;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-main-body {
+    display: flex;
+    justify-content: space-between;
     align-items: start;
+    gap: 15px;
+    margin-top: 50px;
 }
 
 .contact-text {
@@ -757,10 +830,21 @@ hr {
     line-height: 25px;
 }
 
+.contact-text a {
+    text-decoration: none;
+    color: #333;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
 .contact-text button {
     width: 220px;
     height: 71px;
-    background: var(--background-color2, #FBFBFB);
+    background: var(--Gray-1, #333);
+    color: #FFF;
     border: 0;
     display: flex;
     justify-content: start;
@@ -773,6 +857,7 @@ hr {
 .contact-text button:hover {
     background: #F2F2F2;
     transition: all 0.1s ease 0s;
+    color: #333333;
 }
 
 .contact-text button:active {
@@ -831,3 +916,55 @@ hr {
     background-color: var(--background-color2);
     transform: rotate(90deg);
   }
+
+/* sample project  */
+.sample-project {
+    padding: 0 130px;
+    margin-top: 50px;
+}
+
+.sample-project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sample-project-container h1 {
+    color: var(--Gray-1, #333);
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.sample-project-container hr {
+    margin-bottom: 50px;
+}
+
+.project-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sample-text {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 156.25% */
+}
+
+.page-header-text {
+    color: var(--Gray-1, #333);
+    font-family: Roboto;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; 
+}
